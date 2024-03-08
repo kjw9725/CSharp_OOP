@@ -9,6 +9,31 @@ namespace TextRPG
     // 기능: Move, Attack, Die
 
     // OOP(은닉성/상속성/다형성)
+
+    // 은닉성(보안)
+    // 자동차
+    // 핸들 페잘 차문
+    // 전기장치 엔진 기름 <-> 외부 노출
+    class Knight
+    {
+        // 접근 한정자
+        // public(수정) protected(할당된 클래스 한정 수정 가능) private(수정불가)
+
+        protected int hp;
+
+    }
+
+    class SuperKnight : Knight
+    {
+        void Test()
+        {
+            hp = 10;
+        }
+    }
+
+
+
+
     class Player
     {
         // 필드
@@ -21,13 +46,13 @@ namespace TextRPG
     {
 
     }
-    class Archer: Player
+    class Archer : Player
     {
 
     }
 
     // Ref 참조
-    class Knight: Player
+    class Knight : Player
     {
 
         static public Knight CreateKnight()
